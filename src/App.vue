@@ -86,10 +86,11 @@ export default{
             
            setTimeout(()=>{
               this.listArr.push({type:'4',title:this.keyword});
+              this.keyword = '';
            },300)
            // 发送请求的数据
            this.postRequest('fqa-service-h5/api/v1/fqa/search/question',{application:this.GLOBAL.applicationID,question:this.keyword});
-           this.keyword = '';
+        
         }
       },
 
